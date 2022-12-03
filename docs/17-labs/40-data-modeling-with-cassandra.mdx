@@ -1,0 +1,47 @@
+# Data Modeling with Cassandra
+
+## Sparkify Data Modeling
+
+A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming application. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the application, as well as a directory with JSON meta-data on the songs in their application.
+
+They'd like a data engineer to create a Apache Cassandra database which can create queries on song play data to answer the questions and make meaningful insights. The role of this project is to create a database schema and ETL pipeline for this analysis.
+
+We will model the data with Apache Cassandra and build an ETL pipeline using Python. The ETL pipeline transfers data from a set of CSV files within a directory to create a streamlined CSV file to model and insert data into Apache Cassandra tables. We will create separate denormalized tables for answering specific queries, properly using partition keys and clustering columns.
+
+**Event Dataset**
+
+Event dataset is a collection of CSV files containing the information of user activity across a period of time. Each file in the dataset contains the information regarding the song played, user information and other attributes .
+
+List of available data columns :
+
+```
+artist, auth, firstName, gender, itemInSession, lastName, length, level, location, method, page, registration, sessionId, song, status, ts, userId
+```
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/cassandra-sparkify) link for more information.
+
+## Create a Data Model for an Email System
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/cassandra-email-data-model) link for more information.
+
+## Create a Data Model for a Digital Music Library
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/cassandra-digital-music-library) link for more information.
+
+## Create a Data Model for Temperature Monitoring Sensor Networks
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/cassandra-sensor-data-model) link for more information.
+
+## Create a Data Model for Investment Accounts or Portfolios
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/cassandra-investment-data-model) link for more information.
+
+## Create a Data Model for Online Shopping Carts
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/cassandra-shopping-cart-data-model) link for more information.
+
+## Hotel Reservations Data Modeling
+
+Read the Description [here](https://knowledgetree.notion.site/Hotel-Reservations-Data-Modeling-with-Cassandra-be88deb338584ed08939393b44aa4967).
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/cassandra-hotel-reservations) link for more information.

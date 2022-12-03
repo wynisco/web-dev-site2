@@ -1,0 +1,476 @@
+# Getting Started with Postgres
+
+## How to connect to Postgres
+
+1. Connect via VS-Code SQLTools Extension
+2. Connect via DBeaver
+3. Connect via pgpAdmin
+4. Connect via CLI
+5. Connect via Python
+
+## Connect via Python and Create a new database named `mydb`
+
+:::note
+Install the psycopg2 library with `pip install psycopg2-binary` in the terminal environment.
+:::
+
+```py
+import os
+import pandas as pd
+from sqlalchemy import create_engine
+
+POSTGRES_USERNAME = ''
+POSTGRES_PASSWORD = ''
+POSTGRES_ENDPOINT = ''
+POSTGRES_DATABASE = ''
+
+CONN = f"postgresql://{POSTGRES_USERNAME}:{POSTGRES_PASSWORD}@{POSTGRES_ENDPOINT}:5432/{POSTGRES_DATABASE}"
+
+engine = create_engine(CONN)
+
+conn = engine.connect()
+
+try: 
+    conn.execution_options(isolation_level="AUTOCOMMIT").execute("CREATE DATABASE mydb")
+except Exception as e:
+    print(e)
+finally:
+    conn.close()
+```
+
+## Create the following table schema into the database
+
+| field name | data type |
+| ---------- | --------- |
+| student_id | integer |
+| name | varchar |
+| age | integer |
+| gender | varchar |
+| subject | varchar |
+| marks | integer |
+
+```py
+conn = engine.connect()
+
+try: 
+    conn.execute("CREATE TABLE IF NOT EXISTS students (student_id int, name varchar,\
+    age int, gender varchar, subject varchar, marks int);")
+except Exception as e: 
+    print("Error: Issue creating table")
+    print(e)
+finally:
+    conn.close()
+```
+
+## Insert the following two rows in the table
+
+- First Row:  1, "Raj", 23, "Male", "Python", 85
+- Second Row: 2, "Priya", 22, "Female", "Python", 86
+
+```py
+conn = engine.connect()
+
+try: 
+    conn.execute("INSERT INTO students (student_id, name, age, gender, subject, marks) \
+                 VALUES (%s, %s, %s, %s, %s, %s)", \
+                 (1, "Raj", 23, "Male", "Python", 85))
+    conn.execute("INSERT INTO students (student_id, name, age, gender, subject, marks) \
+                  VALUES (%s, %s, %s, %s, %s, %s)",
+                  ( 2, "Priya", 22, "Female", "Python", 86))
+except Exception as e: 
+    print("Error: Inserting Rows")
+    print (e)
+finally:
+    conn.close()
+```
+
+## Retrieve the results and print
+
+**Method 1: Using connection fetch method**
+
+```py
+conn = engine.connect()
+
+try: 
+    result = conn.execute("SELECT * FROM students;")
+except Exception as e: 
+    print("Error: select *")
+    print(e)
+
+row = result.fetchone()
+while row:
+    print(row)
+    row = result.fetchone()
+```
+
+**Method 2: Using Pandas**
+
+```py
+conn = engine.connect()
+pd.read_sql("SELECT * FROM students", con=conn)
+```
+
+## Perform CRUD operations on a sample music data
+
+```py
+query = """
+CREATE TABLE Music (
+    Artist VARCHAR(20) NOT NULL, 
+    SongTitle VARCHAR(30) NOT NULL,
+    AlbumTitle VARCHAR(25),
+    Year INT,
+    Price FLOAT,
+    Genre VARCHAR(10),
+    CriticRating FLOAT,
+    Tags TEXT,
+    PRIMARY KEY(Artist, SongTitle)
+);
+"""
+
+conn = engine.connect()
+
+try: 
+    result = conn.execute(query)
+except Exception as e: 
+    print(e)
+
+query = """
+INSERT INTO Music 
+    (Artist, SongTitle, AlbumTitle, 
+    Year, Price, Genre, CriticRating, 
+    Tags)
+VALUES(
+    'No One You Know', 'Call Me Today', 'Somewhat Famous',
+    2015, 2.14, 'Country', 7.8,
+    '{"Composers": ["Smith", "Jones", "Davis"],"LengthInSeconds": 214}'
+);
+INSERT INTO Music 
+    (Artist, SongTitle, AlbumTitle, 
+    Price, Genre, CriticRating)
+VALUES(
+    'No One You Know', 'My Dog Spot', 'Hey Now',
+    1.98, 'Country', 8.4
+);
+INSERT INTO Music 
+    (Artist, SongTitle, AlbumTitle, 
+    Price, Genre)
+VALUES(
+    'The Acme Band', 'Look Out, World', 'The Buck Starts Here',
+    0.99, 'Rock'
+);
+INSERT INTO Music 
+    (Artist, SongTitle, AlbumTitle, 
+    Price, Genre, 
+    Tags)
+VALUES(
+    'The Acme Band', 'Still In Love', 'The Buck Starts Here',
+    2.47, 'Rock', 
+    '{"radioStationsPlaying": ["KHCR", "KBQX", "WTNR", "WJJH"], "tourDates": { "Seattle": "20150625", "Cleveland": "20150630"}, "rotation": Heavy}'
+);
+"""
+
+conn = engine.connect()
+
+try: 
+    result = conn.execute(query)
+except Exception as e: 
+    print(e)
+
+query = """
+SELECT * FROM Music;
+"""
+
+conn = engine.connect()
+pd.read_sql(query, conn)
+
+query = """
+SELECT * FROM Music
+WHERE Artist='No One You Know';
+"""
+
+conn = engine.connect()
+pd.read_sql(query, conn)
+
+query = """
+SELECT * FROM Music
+WHERE Artist='No One You Know' AND SongTitle LIKE 'Call%%';
+"""
+
+conn = engine.connect()
+pd.read_sql(query, conn)
+
+query = """
+SELECT * FROM Music
+WHERE Artist='No One You Know' AND SongTitle LIKE '%%Today%%'
+AND Price > 1.00;
+"""
+
+conn = engine.connect()
+pd.read_sql(query, conn)
+
+query = """
+UPDATE Music
+SET Genre = 'Disco'
+WHERE Artist = 'The Acme Band' AND SongTitle = 'Still In Love';
+"""
+
+conn = engine.connect()
+
+try: 
+    conn.execute(query)
+except Exception as e: 
+    print(e)
+
+query = """
+SELECT * FROM Music;
+"""
+
+conn = engine.connect()
+pd.read_sql(query, conn)
+
+query = """
+DELETE FROM Music
+WHERE Artist = 'The Acme Band' AND SongTitle = 'Look Out, World';
+"""
+
+conn = engine.connect()
+
+try: 
+    conn.execute(query)
+except Exception as e: 
+    print(e)
+
+query = """
+SELECT * FROM Music;
+"""
+
+conn = engine.connect()
+pd.read_sql(query, conn)
+
+query = """
+DROP TABLE Music;
+"""
+
+conn = engine.connect()
+
+try: 
+    conn.execute(query)
+except Exception as e: 
+    print(e)
+```
+
+## Download and insert data from a csv file into the database
+
+```py
+!wget -q --show-progress https://github.com/RecoHut-Datasets/retail_general/raw/main/sample_superstore.csv
+
+!head sample_superstore.csv
+
+data = pd.read_csv('sample_superstore.csv')
+
+data.to_sql('superstore',
+            con=engine,
+            if_exists='replace',
+            index=False,
+            method='multi')
+
+conn = engine.connect()
+pd.read_sql("SELECT * FROM superstore LIMIT 10", con=conn)
+```
+
+**Create Fact and Dimension Tables from Denormalized Raw Data**
+
+In data warehousing world there are occasions where developers have to reverse engineer model from flat csv files. We will understand this with simple example.
+
+**Login to RDS Postgres using psql**
+
+```sh
+psql --host=database-1.cy8ltogyfgas.us-east-1.rds.amazonaws.com --port=5432 --username=postgres --password --dbname=sparsh
+```
+
+**Create Schema & Rawdata table**
+
+This step is the dump the entire CSV into a ProstgreSQL table so its easier to clean or create Dimension tables.
+
+Here we will be creating 3 schemas called landing, dim and fact. Schemas are very useful in grouping the tables logically.
+
+```sh
+create schema elt_landing;
+create schema elt_dim;
+create schema elt_fact;
+```
+
+```sh
+create table elt_landing.rawdata (
+    name varchar(100)
+    ,gender varchar(20)
+    ,profession varchar(50)
+    ,state varchar(2)
+    ,asofdate date
+    ,temperature float
+    ,pulse int
+);
+```
+
+Verify the table & schema creation:
+
+```sh
+\dt elt_*.*
+```
+
+**Import CSV data into Postgres table**
+
+```csv title="data.csv"
+Name,Gender,Profession,state,asOfDate,temperature,pulse
+Rachel Green,Female,Designer,NY,2020-11-01,98.4,60
+Sheldon Cooper,Male,Physicist,CA,2020-11-05,98.5,70
+Penny,Female,Waitress,CA,2020-11-15,99.2,75
+George Costanza,Male,Agent,NJ,2020-05-05,98.7,90
+Jerry Seinfeld,Male,Comedian,NY,2020-01-01,98.6,65
+```
+
+```sh
+\COPY elt_landing.rawdata FROM 'data.csv' DELIMITER ',' CSV HEADER;
+```
+
+Verify the data:
+
+```sh
+select count(*) from elt_landing.rawdata;
+select * from elt_landing.rawdata limit 10;
+```
+
+**Add a surrogate ID column**
+
+> surrogate column means, column with sequence of numbers, generally auto generated.
+
+```sh
+alter table elt_landing.rawdata add id serial;
+select * from elt_landing.rawdata limit 10;
+```
+
+**Identify the possible Dimensions**
+
+In this sample we can choose Gender, Name, State, Profession as possible dimensions.
+
+Using select statement generate Dimension tables based on Distinct values.
+
+Creating Gender dimension. Here the sub query returns the distinct genders and using the Windowing Function (row_number()) we are generating a unique ID for each gender.
+
+```sql
+create table elt_dim.gender as 
+select 
+    row_number() Over(order by gender) as genderid
+    ,gender 
+from 
+    (select distinct gender from elt_landing.rawdata) t;
+```
+
+Similarly creating other Dimension tables:
+
+```sql
+-- Second Query
+
+create table elt_dim.person as
+select 
+    row_number() Over(order by name) as personid
+   ,name 
+from 
+    (select distinct name from elt_landing.rawdata) t;
+
+-- Third Query
+
+create table elt_dim.profession as
+select 
+    row_number() Over(order by profession) as professionid
+    ,profession 
+from 
+    (select distinct profession from elt_landing.rawdata) t;
+
+-- Fourth Query
+
+create table elt_dim.state as 
+select 
+    row_number() Over(order by state) as stateid
+    ,state 
+from 
+    (select distinct state from elt_landing.rawdata) t;
+```
+
+Verify the Dimension tables:
+
+```sql
+select * from elt_dim.person;
+select * from elt_dim.profession;
+select * from elt_dim.state;
+select * from elt_dim.gender;
+```
+
+**Build Fact table based on IDs from Dimension Table**
+
+This is the key step which will be generating the necessary Fact table. As the Dimensions are generated from landing data, JOIN will be used to build the fact table.
+
+```sql
+create table elt_fact.user
+as
+select
+    r.id
+    ,p.personid
+    ,g.genderid
+    ,pr.professionID
+    ,s.stateID
+    ,r.asofdate
+    ,r.temperature
+    ,r.pulse
+from
+    elt_landing.rawdata r
+    JOIN elt_dim.person as p on r.name = p.name
+    JOIN elt_dim.gender as g on r.gender = g.gender
+    JOIN elt_dim.profession as pr on r.profession = pr.profession
+    JOIN elt_dim.state as s on r.state = s.state;
+```
+
+In the above query r.id is the Original Surrogate key from elt_landing.rawdata.
+
+Compare and verify the data between elt_landing.rawdata and elt_fact.user table:
+
+```sql
+select * from elt_landing.rawdata where id = 1;
+```
+
+```sql
+select * from elt_fact.user where id = 1;
+select * from elt_dim.person where personid = 4;
+```
+
+This is the basics, if needed the data can be normalized / modeled further.
+
+Example : asofdate is used as part of Fact, if needed date can be normalized into Year, Month, Day for Snowflake Schema.
+
+## Building a Database for Crime Reports
+
+:::info
+This is assignment-oriented.
+:::
+
+Using PostgreSQL for storing data related to crimes that occurred in Boston.  Dataquest provided the dataset `boston.csv` for input. Your goal is to:
+
+* Create the table `boston_crimes`
+* Create the table with the appropriate data types for storing the information from `boston.csv`
+* Store the table inside the schema `crimes`
+* Create the user groups `readonly` and `readwrite` with appropriate privileges 
+* Create the users `data_analyst` and `data_scientist` and assign to `readonly` and `readwrite` groups, respectively
+* Verify if the privileges of user groups are set accordingly
+
+To accomplish your goals in this project, you would have to  perform the following:
+
+* Create the required database and schema after installing PostgreSQL and `psycopg2` module 
+* Explore the column headings and content of `boston.csv` to determine the appropriate data types
+* Create the required table using the appropriate data types
+* Load the data from `boston.csv` into the table
+* Create the user group `readonly` which has the following privileges: database connection, schema usage, and data selection from all tables in the schema
+* Create the user group `readwrite` which has similar privileges with `readonly` and capable of inserting, deleting, and updating the data in all tables in the schema
+* Create the requested users and assign them to their respective user groups
+* Test the database if correct objects is created and users/groups have the right privileges
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/postgres-crime-reports) link for more information.

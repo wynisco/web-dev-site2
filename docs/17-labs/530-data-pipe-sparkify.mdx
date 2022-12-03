@@ -1,0 +1,58 @@
+# Building a Data Pipeline for Sparkify Music Company
+
+## Process
+
+### Requirements, Schema and DDL
+
+In this project, we will solve the problem of a hypothetical music company by enabling their data analysts to query database for insights. For this, we will build an end-to-end ETL pipeline. In first part, we will understand the problem statement and business requirements. Then we will wear the cap of data engineer and design the star schema. We will then write the DDL based on this schema and load this DDL into AWS RDS Postgres database.
+
+### Data Modeling with Postgres
+
+In this milestone, we will model the data with Postgres and build an ETL pipeline using Python. The fact and dimension tables for a star database schema for a particular analytic focus is defined, and an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL was developed.
+
+### Data Modeling with Apache Cassandra
+
+In this milestone, we will model the data with Apache Cassandra and build an ETL pipeline using Python. The ETL pipeline transfers data from a set of CSV files within a directory to create a streamlined CSV file to model and insert data into Apache Cassandra tables. We will create separate denormalized tables for answering specific queries, properly using partition keys and clustering columns.
+
+### ETL, CRUD and Data Analysis
+
+Extract music user and logs data, process it in pandas dataframes and load them into AWS RDS Postgres database. Run SQL CRUD commands to interact with the data and run some queries to generate music insights.
+
+### ETL with Dockerization and ECS Service
+
+Deploy Postgres database server as a cloud service using Docker Compose and AWS ECS Service. Rebuild the ETL pipeline in this setup.
+
+### Spark and Data Lakes
+
+In this milestone, we will build a data lake on AWS S3 and build an ETL pipeline for a data lake hosted on S3. The data is loaded from S3 and processed into analytics tables using Spark and the processed data is loaded back into S3 in the form of parquet files.****
+
+The data stored on S3 buckets is extracted and processed using Spark, and is then inserted into the fact and dimensional tables.
+
+### Cloud Data Warehouses
+
+Sharpen your data warehousing skills and deepen your understanding of data infrastructure. Create cloud-based data warehouses on Amazon Web Services (AWS). Build a data warehouse on AWS and build an ETL pipeline for a database hosted on Redshift. The data is loaded from S3 buckets to staging tables on Redshift and modeled into fact and dimensions tables to perform analytics and obtain meaningful insights.
+
+### Data Pipelines with Airflow
+
+A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming application. Sparkify has decided that it is time to introduce more automation and monitoring to their data warehouse ETL pipelines and have come to the conclusion that the best tool to achieve this is Apache Airflow.
+
+They'd like a data engineer to create high grade data pipelines that are dynamic and built from reusable tasks, can be monitored, and allow easy backfills. They have also noted that the data quality plays a big part when analyses are executed on top the data warehouse and want to run data quality tests against their datasets after the ETL steps have been executed to catch any discrepancies in the datasets.
+
+The source data resides in S3 and needs to be processed in Sparkify's data warehouse in Amazon Redshift. The source datasets consist of JSON logs that tell about user activity in the application and JSON metadata about the songs the users listen to.
+
+Schedule, automate, and monitor data pipelines using Apache Airflow. Run data quality checks, track data lineage, and work with data pipelines in production.
+
+In this milestone, we will build data pipelines using Apache Airflow using custom defined operators to perform tasks such as staging the data, filling the data warehouse, and running checks on the data as the final step.****
+
+The data stored on S3 buckets is staged and then inserted to fact and dimensional tables on Redshift using Airflow pipelines.
+
+[Read this for more information on Airflow](https://knowledgetree.notion.site/Building-a-Data-Pipeline-for-Sparkify-Music-Company-Data-Pipelines-with-Airflow-Shared-bc7d6c79c5be426ba75e2cb2501fb663)
+
+Follow [this](https://github.com/datalaker/data-engineering-private/tree/main/sparkify-music-data-pipeline) link for more information.
+
+## Links & References
+
+1. [https://dev.to/raphaelmansuy/10-minutes-to-deploy-a-docker-compose-stack-on-aws-illustrated-with-hasura-and-postgres-3f6e](https://dev.to/raphaelmansuy/10-minutes-to-deploy-a-docker-compose-stack-on-aws-illustrated-with-hasura-and-postgres-3f6e)
+2. [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_installation.html)
+3. [https://github.com/KentHsu/Udacity-Data-Engineering-Nanodgree](https://github.com/KentHsu/Udacity-Data-Engineering-Nanodgree)
+4. [https://github.com/vineeths96/Data-Engineering-Nanodegree](https://github.com/vineeths96/Data-Engineering-Nanodegree)

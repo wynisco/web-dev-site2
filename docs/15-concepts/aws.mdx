@@ -1,0 +1,126 @@
+# AWS
+
+## AWS Essentials
+
+* AWS CLI
+* IAM Access Management
+* S3 Bucket
+* Secret Manager
+
+## S3 Bucket
+
+<details>
+<summary>Getting started with S3 command-line</summary>
+
+**Create a bucket named `de-first`**
+
+```sh
+aws s3api create-bucket --bucket de-first
+```
+
+**List all the buckets**
+
+```sh
+aws s3 ls
+```
+
+**List the content of a bucket named `de-first`**
+
+```sh
+aws s3 ls s3://de-first/
+```
+
+**Copy a local file `/Files/sample.txt` to the bucket `de-first`**
+
+```sh
+aws s3 cp /Files/sample.txt s3://de-first/sample.txt
+```
+
+**Sync all files of a folder `/Files` to the bucket's `datafiles` folder**
+
+```sh
+aws s3 sync /Files s3://de-first/datafiles
+```
+
+</details>
+
+## Boto3
+
+Download an object from a S3 bucket to a local file using the Resource API (high-level) of Boto 3:
+
+```py reference title="Boto3 Download from S3"
+https://github.com/alfonsof/aws-python-examples/blob/fe88df550cc567b3d3951225fee7e4c2ceaf9577/awss3download-rapi/s3download.py#L36-L44
+```
+
+## Secret Manager
+
+<details>
+<summary>Retrieve the value of a secret</summary>
+
+```py
+import boto3
+import json
+
+def get_secret(secret_name, region_name="us-east-1"):
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name)
+    get_secret_value_response = client.get_secret_value(SecretId=secret_name)
+    get_secret_value_response = json.loads(get_secret_value_response['SecretString'])
+    return get_secret_value_response
+
+secret_values = get_secret(secret_name='de')
+```
+
+</details>
+
+
+## Data Migration Service (DMS)
+
+<details>
+<summary>Short video</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ouia1Sc5QGo" title="AWS Database Migration Service" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+
+## Relational Database Service (RDS)
+
+<details>
+<summary>Short video</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eMzCI7S1P9M" title="Understanding Amazon Relational Database Service (RDS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+<details>
+<summary>RDS Aurora - Relational Database Built for the Cloud</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FzxqIdIZ9wc" title="Introduction to Amazon Aurora - Relational Database Built for the Cloud - AWS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+## Docker Containers
+
+<details>
+<summary>Containers on AWS Overview: ECS | EKS | Fargate | ECR</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AYAh6YDXuho" title="Containers on AWS Overview: ECS | EKS | Fargate | ECR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+<details>
+<summary>An Overview of AWS Elastic Container Service (ECS)</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I9VAMGEjW-Q" title="An Overview of AWS Elastic Container Service (ECS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>
+
+<details>
+<summary>AWS EC2 on ECS vs Fargate | Whats the Difference and When To Use What?</summary>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DVrGXjjkpig" title="AWS EC2 on ECS vs Fargate | Whats the Difference and When To Use What?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</details>

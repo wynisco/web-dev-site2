@@ -1,0 +1,7 @@
+# ELT vs ETL
+
+| Name | ETL | ELT |
+| ------- | --- | --- |
+| History | Data warehouse cost is very expensive (millions of dollars). Data volume is still manageable. People are forced to practice waterfall development. | Cloud data warehouse drives the cost of storing and processing data down significantly (hundreds/thousands of dollars only). Data volume explode. Agile practices are possible. |
+| Process | Raw data is transformed in a staging server. Only transformed data is loaded into the data warehouse. Transformations rely on the server’s processing power. | Raw data is loaded into the data warehouse. Transformations are done within the data warehouse. Results are also stored within the data warehouse. Transformations rely on data warehouse processing power. |
+| Pros/Cons | Data warehouse only contains cleaned, transformed data ⇒ maximize utilization of data warehouse. Doesn’t work well when data volume increase ⇒ bottlenecks on the staging server. Usually take weeks/months to change process due to waterfall approach. | All data is stored in the cloud data warehouse ⇒ very easy to change up new data warehouse. Doesn’t need additional staging servers. Assuming a modern data warehouse, works well when data volume increases. Takes only days to transform/introduce new data. |

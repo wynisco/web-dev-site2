@@ -1,0 +1,158 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Workspace Setup
+
+### Install Anaconda and Jupyter
+
+Watch and follow this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/syijLJ3oQzU" title="How to Install Anaconda (Python) and Jupyter Notebook on Windows 10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Install Visual Studio Code (VSCode)
+
+Watch and follow this video:
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows"><iframe width="560" height="315" src="https://www.youtube.com/embed/MlIzFUI1QGA" title="Install and Use Visual Studio Code on Windows 10  (VS Code)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></TabItem>
+  <TabItem value="mac" label="macOS"><iframe width="560" height="315" src="https://www.youtube.com/embed/2RoWZXcbPjw" title="How to install and setup VS Code on Mac | 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></TabItem>
+</Tabs>
+
+### Create GitHub Account
+
+Watch and follow this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QUtk-Uuq9nE" title="How to Create Github Account for beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Setup Git Credentials
+
+Watch and follow this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WgZIv5HI44o" title="GitHub: Add an SSH Key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+:::note
+SSH setup commands:
+
+```sh
+ssh-keygen -t rsa -b 4096 -C "<email>"
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
+```
+:::
+
+### Create AWS Account
+
+Watch and follow this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XhW17g73fvY" title="How to Create AWS Account Free in 5 Minutes - AWS Account Creation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Setup AWS Credentials
+
+Watch and follow this video. You can also check out the documentation [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SON8sY1iOBU" title="Set up AWS Credentials in 10 minutes!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Install DBeaver
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NWTX0W-WgzE" title="How to download and install DBeaver Windows & Lunix & macOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Create Databricks Account
+
+Watch and follow [this](https://knowledgetree.notion.site/Setup-Databricks-Account-f28350a339334f9aa822ed9dd076cced) video.
+
+### Create Snowflake Account
+
+Watch and follow this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AYVwv3K0MIw" title="Snowflake Free Trial Account Setup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Google Colaboratory
+
+Watch and follow this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i-HnvsehuSw" title="Getting Started with Google CoLab | How to use Google Colab" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Install Postgres
+
+Watch and follow this video:
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows"><iframe width="560" height="315" src="https://www.youtube.com/embed/RAFZleZYxsc" title="How to Install and Setup PostgreSQL on Windows 10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></TabItem>
+  <TabItem value="mac" label="macOS"><iframe width="560" height="315" src="https://www.youtube.com/embed/EZAa0LSxPPU" title="How to install Postgres on macOS | How to setup PostgreSQL on MacOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></TabItem>
+</Tabs>
+
+### Setup RDS Postgres
+
+Watch and follow this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t_Q5NTtYbx4" title="AWS RDS Your First PostgreSQL Instance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Install Cassandra
+
+```sh
+wget https://dlcdn.apache.org/cassandra/4.0.6/apache-cassandra-4.0.6-bin.tar.gz
+
+tar -xvf apache-cassandra-4.0.6-bin.tar.gz
+
+mv apache-cassandra-4.0.6 ~/cassandra
+```
+
+Add `export PATH="$HOME/cassandra/bin:$PATH"` in your bash profile. Validate by running `cassandra --version`. It will show `4.0.6`.
+
+Congratulations! Now your Cassandra server should be up and running with a new single-node cluster called “Test Cluster,” ready to interact with other nodes and clients.
+
+
+- Run server: `cassandra -f`
+
+### Install DataStax Bulk Loader
+
+```sh
+wget https://downloads.datastax.com/dsbulk/dsbulk-1.10.0.tar.gz
+
+tar -xvf dsbulk-1.10.0.tar.gz
+
+mv dsbulk-1.10.0 ~/dsbulk
+
+rm dsbulk-1.10.0.tar.gz
+```
+
+Add `export PATH="$HOME/dsbulk/bin:$PATH"` in your bash profile.
+
+### Install JVM
+
+1. Go to https://www.oracle.com/java/technologies/downloads/#java8-mac or https://download.oracle.com/otn/java/jdk/8u341-b10/424b9da4b48848379167015dcc250d8d/jdk-8u341-macosx-x64.dmg (for mac users)
+2. Install the downloaded package
+3. Run these commands to set java path
+
+```sh
+/usr/libexec/java_home
+export JAVA_HOME=$(/usr/libexec/java_home)
+source
+```
+
+### Install Airflow
+
+First install airflow with:
+
+```sh
+pip install apache-airflow==2.4.1
+```
+
+Create a new folder and run the following commands inside that folder to start the airflow:
+
+```sh
+export AIRFLOW_HOME=$(pwd)
+export AIRFLOW__CORE__LOAD_EXAMPLES=False
+export AIRFLOW__CORE__ENABLE_XCOM_PICKLING=True
+airflow db init
+airflow users create \
+    --username admin \
+    --password admin \
+    --firstname User \
+    --lastname Name \
+    --role Admin \
+    --email email@example.com
+airflow standalone
+```
