@@ -15,8 +15,8 @@ const config = {
   onBrokenMarkdownLinks: 'ignore',
   trailingSlash: false,
   favicon: 'img/wys_logo.jpeg',
-  organizationName: 'datalaker',
-  projectName: 'data-engineering-docs',
+  organizationName: 'wynisco',
+  projectName: 'datacamp',
   themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -34,16 +34,16 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  plugins: [
-    [
-      'docusaurus-plugin-content-gists',
-      {
-        enabled: true,
-        verbose: true,
-        personalAccessToken: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
-      },
-    ],
-  ],
+  // plugins: [
+  //   // [
+  //   //   'docusaurus-plugin-content-gists',
+  //   //   {
+  //   //     enabled: true,
+  //   //     verbose: true,
+  //   //     personalAccessToken: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
+  //   //   },
+  //   // ],
+  // ],
   presets: [
     [
       'classic',
