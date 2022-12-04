@@ -52,6 +52,7 @@
 1. [Doordash Engineering](https://doordash.engineering/)
 1. [SnowFlake Blog](https://community.snowflake.com/s/blog) 
 1. [Palantir Blog](https://medium.com/palantir/tech/home)
+2. [Awesome Data Engineering](https://awesomedataengineering.com/)
 
 ## Data Engineering
 

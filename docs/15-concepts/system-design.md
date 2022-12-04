@@ -330,6 +330,33 @@ Ex: Twitter, Whatsapp, Instagram
 - [Design Yelp](https://medium.com/coders-mojo/day-14-of-system-design-case-studies-series-design-yelp-af432d13e838?sk=55e19b7d8ad43c4109e9b1694678c177)
 - [Design Tinder](https://medium.com/coders-mojo/day-16-of-system-design-case-studies-series-design-tinder-a0867163f449?sk=6313f0b9760c3d78a17443a98bdb3330)
 
+## System Design Interviews
+
+### Distributed Message Queue
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/iJLL-KPqBpM" title="System Design Interview - Distributed Message Queue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Notification Service
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/bBTPZ9NdSk8" title="System Design Interview - Notification Service" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Rate Limiting (local and distributed)
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/FU4WlwfS3G0" title="System Design Interview - Rate Limiting (local and distributed)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Distributed Cache
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/iuqZvajTOyA" title="System Design Interview - Distributed Cache" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Top K Problem (Heavy Hitters)
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/kx-XDoPjoHw" title="System Design Interview - Top K Problem (Heavy Hitters)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Step By Step Guide
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/bUHFg8CZFws" title="System Design Interview – Step By Step Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Common System Design Questions
 
 1. Design a Credit Card Authorization System

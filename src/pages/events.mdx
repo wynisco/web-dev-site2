@@ -1,0 +1,46 @@
+import { Card, Col, Row, Divider } from 'antd';
+import { Alert } from 'antd';
+
+<Alert message="We hold several sessions with experts for our students which is open to all. Few might be paid one." type="info" showIcon closable/>
+
+<br/>
+
+<Divider orientation="left">Upcoming Events</Divider>
+
+<div className="site-card-wrapper">
+<Row gutter={{xs: 8, sm: 16, md: 24, lg: 32}}>
+    <Col className="gutter-row" span={12}>
+    <Card title="Data Engineering" extra={<a href="https://deng.wynisco.com/">More</a>}>
+        <div>
+            <p>Learn how to become Data Engineer</p>
+            <p>Date : Sunday Dec 4, 2022 <br/>Time : 9.30 PM EST</p>
+        </div>
+    </Card>
+    </Col>
+    <Col className="gutter-row" span={12}>
+    <Card title="Serverless Data Pipeline" extra={<a href="https://deng.wynisco.com/">More</a>}>
+        <div>
+            <p>Learn how to build serverless ELT pipeline using AWS</p>
+            <p>Date : Sunday Nov 27, 2022 <br/>Time : 9.30 PM EST</p>
+        </div>
+    </Card>
+    </Col>
+</Row>
+</div>
+
+<br/>
+
+<Divider orientation="left">Past Events & Recordings</Divider>
+
+<div className="site-card-wrapper">
+<Row>
+    <Col>
+    <Card title="Data Pipeline" extra={<a href="https://deairflow.gr8.com/">More</a>}>
+        <div>
+            <p>Building Data pipelines using Airflow (Hands on Lab)</p>
+            <p>Date : Sunday Nov 13, 2022 <br/>Time : 9.30 PM EST</p>
+        </div>
+    </Card>
+    </Col>
+</Row>
+</div>

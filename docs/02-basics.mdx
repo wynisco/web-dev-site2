@@ -1,6 +1,6 @@
 import { Card, Col, Row } from 'antd';
 
-# Getting Started
+# Basics
 
 ## What is Data Engineering?
 
@@ -51,7 +51,7 @@ This is one example of a standard data pipeline in AWS ecosystem:
 
 ## Our Learning Framework
 
-![](/img/learning-framework.drawio.svg)
+![](/img/learning_framework_embedded.svg)
 
 
 ### Learning
@@ -70,19 +70,6 @@ Student assessment is the most important factor in tracking the progress of the 
 3. Lab Assignment (LA): A hypothetical data engineering business case will be provided and the student has to apply the data engineering skills to solve the business requirement. Student will be assessed based on the assignment-specific factors and timely submission.
 4. Capstone Project (CP): Student will pick a brand/company persona and create a hypothetical scenario. Then the student will solve the scenario and submit the code for review. Student will be assessed based on the topic-specific factors and timely submission.
 
-## Our Tech stack
-
-![](/img/techstack_embedded.drawio.svg)
-
-## Features
-- Industrial Project-based Labs
-- Essential Skills Track
-- Assignments
-- Resume Buildups
-- Mock Interviews
-- Capstones
-- Exclusive access to resources
-
 ## Every Week
 - New Labs
 - Full Mock Interviews
@@ -93,145 +80,86 @@ Student assessment is the most important factor in tracking the progress of the 
 - Industrial Case Study Discussion
 - General Discussion
 
-## Essential Skills
+## Skills
 
-<div className="site-card-wrapper">
-<Row gutter={16}>
-    <Col span={8}>
-    <Card title="Python" size="small">
-        Python helps data engineers to build efficient data pipelines as many data engineering tools use Python in the backend. Moreover, various tools in the market are compatible with Python and allow data engineers to integrate them into their everyday tasks by simply learning Python.
-    </Card>
-    </Col>
-    <Col span={8}>
-    <Card title="SQL" size="small">
-        Listed as one of the top technologies on data engineer job listings, SQL is a standardized programming language used to manage relational databases (not exclusively) and perform various operations on the data in them. Data Engineering using Spark SQL.
-    </Card>
-    </Col>
-    <Col span={8}>
-    <Card title="AWS" size="small">
-        Data engineers need to meet various requirements to build data pipelines. This is where AWS data engineering tools come into the scenario. AWS data engineering tools make it easier for data engineers to build AWS data pipelines, manage data transfer, and ensure efficient data storage.
-    </Card>
-    </Col>
-</Row>
-<br/>
-<Row gutter={16}>
-    <Col span={8}>
-    <Card title="Shell" size="small">
-        Unix machines are used everywhere these days and as a data engineer, they are something we interact with every single day. Understanding common shell tools and how to use them to manipulate data will increase your flexibility and speed when dealing with day to day data activities.
-    </Card>
-    </Col>
-    <Col span={8}>
-    <Card title="Git" size="small">
-        Git is one of the skills that every software engineer needs to manage the code base efficiently. GitHub or any version control software is important for any software development projects, including those which are data driven. GitHub allows version control of your projects through Git.
-    </Card>
-    </Col>
-    <Col span={8}>
-    <Card title="VS code" size="small">
-        The VSCode provides rich functionalities, extensions (plugins), built-in Git, ability to run and debug code, and complete customization for the workspace. You can build, test, deploy, and monitor your data engineering applications and pipelines without leaving the application.
-    </Card>
-    </Col>
-</Row>
-<br/>
-<Row gutter={16}>
-    <Col span={8}>
-    <Card title="Colab" size="small">
-        Jupyter Notebook is one of the most widely used tool in data engineering that use Python. This is due to the fact, that it is an ideal environment for developing reproducible data pipelines with Python. Colaboratory, or “Colab” for short, is a provide Jupyter-like environment on the cloud.
-    </Card>
-    </Col>
-</Row>
-</div>
+### SQL
 
-## Curriculum
+Querying data using SQL is an essential skill for anyone who works with data.
 
-```mermaid
-flowchart LR
-    A("Standard track") -->|80% Passing marks| B("Advanced track")
-    B("Advanced track") -->|70% Passing marks| C("Expert track")
-```
+Listed as one of the top technologies on data engineer job listings, SQL is a standardized programming language used to manage relational databases (not exclusively) and perform various operations on the data in them. Data Engineering using Spark SQL.
 
-<details>
-<summary>Standard track</summary>
+### Programming Language
 
-_Standard Track Curriculum Starts_
+As a data engineer you'll be writing a lot of code to handle various business cases such as ETLs, data pipelines, etc. The de facto standard language for data engineering is Python (not to be confused with R or nim that are used for data science, they have no use in data engineering).
 
-* Week 1
-    * Candidate Onboarding
-    * Getting Started with Data Engineering
-    * Workspace Setup
-* Week 2
-    * SQL Data Modeling with Postgres
-    * Data Warehousing with Snowflake
-* Week 3
-    * Data Lakes with S3
-* Week 4
-    * Data Transformation with Python
-    * Data Transformation with SQL
-    * Data Transformation with AWS Lambda
-* Week 5
-    * Data Pipeline and Orchestration with Apache Airflow
-    * IaC with AWS CloudFormation
+Python helps data engineers to build efficient data pipelines as many data engineering tools use Python in the backend. Moreover, various tools in the market are compatible with Python and allow data engineers to integrate them into their everyday tasks by simply learning Python.
 
-_Standard Track Curriculum Ends_
+### Cloud Computing
 
-_Standard Track Marketing Starts_
+Data engineers are expected to be able to process and handle data efficiently. Many companies prefer the cloud solutions to the on-premise ones. Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services.
 
-</details>
+Data engineers need to meet various requirements to build data pipelines. This is where AWS data engineering tools come into the scenario. AWS data engineering tools make it easier for data engineers to build AWS data pipelines, manage data transfer, and ensure efficient data storage.
 
-<details>
-<summary>Advanced track</summary>
+### Shell Scripting
 
-_Advanced Track Curriculum Starts_
+Unix machines are used everywhere these days and as a data engineer, they are something we interact with every single day. Understanding common shell tools and how to use them to manipulate data will increase your flexibility and speed when dealing with day to day data activities.
 
-* Week 6
-    * NoSQL Data Modeling with Cassandra
-    * Data Warehousing with Amazon Redshift
-* Week 7
-    * Data Lakehouses with Delta Lake
-    * Data Transformation with Databricks PySpark
-* Week 8
-    * Data Transformation with AWS Glue Studio
-    * Data Transformation with dbt
-    * Data Quality and Validation with Great Expectations
-* Week 9
-    * Real-time Event Streaming with Apache Kafka
-    * Real-time Event Streaming with Amazon Kinesis
-* Week 10
-    * Container Orchestration with Amazon ECS
-    * REST API with FastAPI
-* Week 11
-    * CICD Pipeline with GitHub Actions
-    * IaC with AWS CloudFormation
+### Git
 
-_Advanced Track Curriculum Ends_
+Git is one of the skills that every software engineer needs to manage the code base efficiently. GitHub or any version control software is important for any software development projects, including those which are data driven. GitHub allows version control of your projects through Git.
 
-_Advanced Track Marketing Starts_
+### VSCode
 
-</details>
+The VSCode provides rich functionalities, extensions (plugins), built-in Git, ability to run and debug code, and complete customization for the workspace. You can build, test, deploy, and monitor your data engineering applications and pipelines without leaving the application.
 
-<details>
-<summary>Expert track</summary>
+### Jupyter Notebook
 
-_Expert Track Curriculum Starts_
+Jupyter Notebook is one of the most widely used tool in data engineering that use Python. This is due to the fact, that it is an ideal environment for developing reproducible data pipelines with Python. Colaboratory, or “Colab” for short, is a provide Jupyter-like environment on the cloud.
 
-* Week 12
-    * NoSQL Data Modeling with DynamoDB
-    * Advanced Data Engineering with Databricks
-* Week 13
-    * Data Pipeline and Orchestration with AWS Step Functions
-    * Data Pipeline and Orchestration with Prefect
-    * Data Pipeline and Orchestration with Databricks Jobs
-    * Change Data Capture with Debezium
-* Week 14
-    * Container Orchestration with Kubernetes
-    * CICD Pipeline with AWS CodePipelines
-    * IaC with Terraform
-* Week 15
-    * MLOps pipelines with Amazon Sagemaker
-    * Machine Learning Regression and Classification modelling Fundamentals
-* Week 16
-    * NLP and Computer Vision Fundamentals
+### Relational Databases - Design & Architecture
 
-_Expert Track Curriculum Ends_
+RDBMS are the basic building blocks for any application data. A data engineer should know how to design and architect their structures, and learn about concepts that are related to them.
 
-_Expert Track Marketing Starts_
-</details>
+### NoSQL Databases - Design & Architecture
+
+NoSQL is a term for any non-relational database model: key-value, document, column, graph, and more. A basic acquaintance is required, but going deeper into any model depends on the job.
+
+### Columnar Databases
+
+Column databases are a kind of nosql databases. They deserve their own section as they are essential for the data engineer as working with Big Data online (as opposed to offline batching) usually requires a columnar back-end.
+
+### Data Warehouses
+
+Understand the concepts behind data warehouses and familiarize youself with common data warehouse solutions.
+
+### OLAP Data Modeling
+
+OLAP (analytical) databases (used in data warehouses) data modeling concepts, modeling the data correctly is essential for a functioning data warehouse.
+
+### Data Lakes and Lakehouses
+
+### Batch Data Processing
+
+Data processing using Python, SQL and Spark. Everyone should know how it works, but going deep into the details and operations are recommended only if necessary.
+
+### Stream Data Processing
+
+Data processing on the fly. Suggested to get a good grasp of the subject and then dive deep into a specific tool like Kafka, Spark, Flink, etc.
+
+### Pipeline / Workflow Management
+
+Scheduling tools for data processing. Airflow is considered to be the defacto standard, but any understanding of DAGs - directed acyclical graphs for tasks will be good.
+
+### Infra as Code
+
+### Container Orchestration
+
+### API Management
+
+### CICD Pipelines
+
+### MLOps Pipelines
+
+### Machine Learning Basics
+
+### Deep Learning Basics - NLP and Computer Vision

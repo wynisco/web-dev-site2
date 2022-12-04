@@ -39,14 +39,7 @@ Example questions include what are linked lists? How would you code them in your
 
 Interviewers use easy technical questions designed to weed out candidates without the right experience. This question assesses your experience level, comfort with specific tools, and the depth of your domain expertise. Data management, SQL and Python questions are there. Data management questions include Data modeling, Data warehousing and Data pipelines. In SQL, you’ll need to know how to use window functions, aggregate functions, subqueries, joins, and sub-selects, as well as handle performance tuning and optimization. In Python, you’ll need to know how to manipulate data structures and use dictionaries, loops and lists, while showing a good understanding of strings, set operations, etc.
 
-- SQL Questions
-- Python Questions: General experience questions like this are jump-off points for more technical case studies. And typically, The interviewer will tailor questions as they pertain to the role. However, you should be comfortable with standard Python and supplemental libraries like Matplotlib, Pandas, and NumPy, know what’s available, and understand when it’s appropriate to use each library. Tip: Don’t fake it. If you don’t have much experience, be honest. You can also describe a related skill or talk about your comfort level in quickly picking up new Python skills (with an example).
-- Data Modeling Questions
-- Data Warehousing Questions
-- Big Data & Cloud Questions
-- Data Pipelining Questions
-- Project-related Questions
-- Software Engineering Questions
+Technical questions can be primarily divided into these categories: SQL, Python, Data Modeling, Data Warehousing, Big Data & Cloud, Data Pipelining, Project-related and Software Engineering.
 
 To prepare:
 
@@ -78,7 +71,7 @@ Expect 1–7 days to write code to answer 1–10 questions on 1–3 datasets, pu
 
 They are looking for clean and modular code, good README with clear delivered ideas, unit tests, and exception handling.
 
-Example question Clean and analyze a dataset of employee salaries and locations. What is the distribution of salaries at different locations? Write a SQL query to do the equivalent task.
+Example question: Clean and analyze a dataset of employee salaries and locations. What is the distribution of salaries at different locations? Write a SQL query to do the equivalent task.
 
 To prepare:
 
@@ -90,33 +83,65 @@ To prepare:
 
 You should feel very accomplished if you get to the on-site interview, but the hardest part is yet to come! On-sites can be grueling affairs of interviewing with 4–10 people in 3–6 hours, especially if you’re not prepared. Knowing what to expect and doing realistic preparation beforehand go a long way toward reducing fear and nervousness.
 
-### Round 1: Problem Solving
+### Round 1: Problem Solving - SQL and Programming
 
 You will be given a problem to solve and you need to apply **Think Out Loud** strategy to solve it. Both Python and SQL could be asked. It can also be performed on a whiteboard instead of IDE. Expect 30–45 minutes interview with 1–2 medium-hard questions to solve on the fly on a whiteboard or on IDE, constantly communicating requirements and solutions with the interviewer.
 
+The coding interview for data engineer roles is usually lighter on the algorithm side but heavier on the data side, and the interview questions are usually more practical. For instance, write a function to transform the input data and produce the desired output data. You will still be expected to use the most optimal data structures and algorithms possible and gracefully handle all the potential data issues. Since data engineers don’t just use the built-in libraries to process data in the real world, the coding interview might also require you to implement solutions using popular open-sourced libraries, such as Spark and pandas. You are generally allowed to look up documentation during the interview if needed. If the job requires proficiency in specific frameworks, be prepared to use those frameworks in your coding interviews.
+
+A good data engineer should be capable of translating complicated business questions into SQL queries and data models with good performance. In order to write efficient queries that process as little data as possible, you need to understand how the query engine and optimizer work. For example, sometimes using CASE statements combined with aggregation functions can replace JOIN and UNION and process much less data.
+
+Sometimes, DSA (Data Structures and Algorithms) based questions can also be asked to check your software engineering foundations.
+
 To prepare:
 
-1. Solve 80–150 LeetCode problems on paper/whiteboard
+1. Solve 80–150 [LeetCode](https://leetcode.com/) and [HackerRank](https://www.hackerrank.com/) problems.
 2. Get at least 20 practice sessions as an interviewee with peers or professionals.
 3. Practice writing clean, readable code on a whiteboard.
+4. For DSA, follow NeetCode [basic](https://neetcode.io/courses/dsa-for-beginners/0) and [advanced](https://neetcode.io/courses/advanced-algorithms/0) course.
 
-### Round 2: Python, SQL and Big Data
+### Round 2: Resume Discussion
 
 You will be asked about the Python, SQL and Big Data projects you worked in. Questions will be asked mainly based on your resume. You need to apply **Don’t be fake** strategy to crack this round. You need to also prepare for the projects you add in resume because the questions around those projects will also be asked.
 
+Your resume is not only the stepping stone to get noticed by recruiters and hiring managers, but also the most important list of projects that you should be ready to discuss in-depth with the interviewers in order to demonstrate your skills, including technical competency, problem-solving, teamwork, communication, and project management.
+
+I strongly recommend practicing talking through your most significant data projects (to someone with an engineering background, if possible) and making sure to answer these questions in your story:
+
+- What was the motivation for the project? (i.e. What data/business problem did your project try to solve?)
+- What teams did you collaborate with? How did you work with them?
+- If you were the project owner, how did you plan and drive it?
+- What are the technical trade-offs made in the system design? (i.e. Why did you use framework X instead of other alternatives?)
+- What were some of the technical statistics related to your project? (e.g. What is the throughput and latency of your data pipeline?)
+- What was the impact of the project? (e.g. How much revenue did it generate? How many people used your application?)
+- What were the challenges you had? How did you solve them?
+
+Numbers are important in telling a great project story. Instead of just saying “it processed a lot of data…”, look up some statistics of your project and include them on your resume. Numbers will showcase the scale, impact, and your deep understanding of the project. They also make your project more believable. (In fact, interviewers might find it suspicious if you can’t even tell how much data your applications can process.)
+
 ### Round 3: System Design
 
-As a Data Engineer, on a day to day basis you are going to design entire systems from scratch or add small features to giant existing pipelines. Even you mention these skills on your resume, it’s crucial for companies to check your ability in a real-life. System design data engineer interview questions are often the most challenging part of technical interviews. Expect 30–45 minutes interview to design a data engineering system to spec. You will be asked questions on topics related to Data modeling, warehousing, data lakes, Transformation and data pipelines. The interviewer can ask you to design a data solution from end to end, usually composed of three parts: data storage, data processing, and data modeling. Scenarios will be provided and you need to design the data pipeline/system. You need to follow **Requirement Gathering** strategy and **4Vs of Big Data** framework and also include the 1) Fault tolerance and 2) Scalability factors in your system design to crack this round. You have to choose the best combination of data storage systems and data processing frameworks based on those requirements. Example questions: Design Twitter — what are the system blocks needed? What database and schema would you use? What about caching and load balancing? What are the tradeoffs of a system? They are looking for your ability to clearly communicate and scope down requirements, design a concept-level pipeline, and knowledge of distributed systems basics.
+As a Data Engineer, on a day to day basis you are going to design entire systems from scratch or add small features to giant existing pipelines. Even you mention these skills on your resume, it’s crucial for companies to check your ability in a real-life. System design data engineer interview questions are often the most challenging part of technical interviews. Expect 30–45 minutes interview to design a data engineering system to spec. You will be asked questions on topics related to Data modeling, warehousing, data lakes, Transformation and data pipelines. The interviewer can ask you to design a data solution from end to end, usually composed of three parts: data storage, data processing, and data modeling. Scenarios will be provided and you need to design the data pipeline/system. You need to apply **Requirement Gathering** process, **4Vs of Big Data** framework and include the **Fault tolerance + Scalability** factors in your system design to crack this round.
+
+The initial interview question is often very short and abstract (e.g. design a data warehouse from end to end) and it’s your job to ask follow-up questions to pin down the requirements and use cases, just like solving a real-life data problem.
+
+In a system design interview, you will design a data solution from end to end, which is usually composed of three parts: data storage, data processing, and data modeling. You have to choose the best combination of data storage systems and data processing frameworks based on the requirements, and sometimes there is more than one optimal solution.
+
+Example questions: Design Twitter — what are the system blocks needed? What database and schema would you use? What about caching and load balancing? What are the tradeoffs of a system? They are looking for your ability to clearly communicate and scope down requirements, design a concept-level pipeline, and knowledge of distributed systems basics.
+
+Data modeling is usually the end piece of a system design interview but sometimes it is a part of the SQL interview instead. One example of a data modeling interview question is to design the backend analytical tables for a reservation system for vet clinics. The most important principle in data modeling is to design your data models based on use cases and query patterns. Again, it is your responsibility to get clarifications on the requirements and use cases so that you can make better design choices.
 
 To prepare:
 
 1. Read Data Engineering Cookbook, the Data Engineering Ecosystem and Grokking the System Design Interview.
+2. Follow NeetCode [course](https://neetcode.io/courses/system-design-for-beginners/0) and [Interviews](https://neetcode.io/courses/system-design-interview/0)
 2. Practice at least 10 different questions on a whiteboard with peers or mentors.
 3. Practice drawing clean, readable systems diagrams on the whiteboard.
 
 ### Round 4: Cultural Fit
 
 It’s very important to be technically strong and knowledgeable, but it’s not enough! If you can’t deliver your brilliant ideas, then no one else can understand and use them. Behavioral types of interviews, such as cultural fit, are meant to show how you can tell your story and explain how you’ve handled tough workplace situations.
+
+Interviews are not exams where you just need the right answers to pass, but rather a series of conversations to see if you can learn quickly and work with a team to solve problems together. Therefore, it is very important to be human and be yourself during interviews.
 
 Expect a 30–45 minutes interview with 2–4 questions about your past situations.
 
@@ -130,8 +155,18 @@ To prepare:
 
 1. Practice at least 30 cultural fit interview questions alone, writing scripts and recording yourself if needed.
 2. Practice at least 10 questions with peers, following the STAR method.
+3. Be nice. Nobody wants to work with jerks.
+4. Have conversations. The best interviews are usually like conversations. Ask questions if you want information or feedback.
+5. Problem-solving, not answers. Just like in real life, you don’t always know the right answer to a problem immediately. It’s more important to show how you would approach the problem instead of only giving an answer.
+6. Show your passion for data engineering. What do you do outside your work responsibility to be a better data engineer?
 
----
+While the interviewers are interviewing you, you are also interviewing them. Would you enjoy working with them? Would this team provide opportunities for you to grow? Do you agree with the manager’s view and managing style? Finding a good team is hard so ask your questions wisely.
+
+:::tip
+Interviewing is very stressful. It is an imperfect process where strangers judge your professional competency only based on one hour of interactions with you and sometimes the interview result is not fair. It is frustrating when you just can’t get any further on interview questions and you feel like the interviewers are looking down at you. Getting rejected over and over again can be devastating to your self-esteem and you may start to think you’re not good enough. I have been there too: never hearing back from most job applications and failing all the coding interviews I could get. I thought I would never be an engineer. But I am glad I didn’t give up.
+
+If you are feeling overwhelmed, frustrated, or hopeless because of interviews, I want to let you know that you are not alone. If you get rejected for a job, it is their loss. Be patient with yourself and stay hopeful, because things will get better and your just need to keep trying! Always show up to your interviews with confidence, because you are good enough!
+:::
 
 ## Tips for Technical Round
 
@@ -142,6 +177,8 @@ Fortunately, online resources abound for preparing for a technical coding interv
 1. Get familiar with data structures. Focus on how to use lists and hashmaps (dictionaries) above all else and solve problems that require you to use and switch between them. Make sure you also understand trees and linked lists. You should understand when and why to use one data structure over another and the space and time complexity of basic operations on all of them (appending, inserting, searching).
 2. Understand some of the basic algorithms such as binary search and merge sort. I recommend the book Grokking Algorithms by Aditya Y. Bhargava for a good introduction if you are not familiar with implementing them.
 3. Work through problems on a platform like Leetcode or Hackerrank. I really recommend Leetcode, especially for refining your work down to one topic like a specific data structure or even to company-specific questions. Here is a link to their collection of “Easy” problems to work through, categorized by data structure: Leetcode Easy Problem Set. In my opinion, making the leap to Leetcode Premium is worth it to get full access to all of the questions plus solutions. They occasionally also offer month-long challenges that will pose a new question each day — take advantage of that! For most data engineering interviews, I think you can stick to “Easy” and “Medium” level problems. Focus on the data structures and understanding the complexity of your solutions. Don’t worry too much about delving into more advanced software engineering topics or “Hard” problems unless you anticipate that the role you are applying for will require it.
+
+In Python, you should be comfortable with standard Python and supplemental libraries like Matplotlib, Pandas, and NumPy, know what’s available, and understand when it’s appropriate to use each library. Tip: Don’t fake it. If you don’t have much experience, be honest. You can also describe a related skill or talk about your comfort level in quickly picking up new Python skills (with an example).
 
 **SQL**
 
@@ -173,8 +210,6 @@ Don’t neglect the soft skills portion of the interview, either! Good communica
 1. One of the most important things you can do to prepare is to talk your way through the problems you are solving. It is really easy to get focused on a coding or schema design problem and go silent as you think; but unfortunately, that makes you completely inscrutable to the interviewer. Talking your way through the thought process is harder than it sounds, and it doesn’t come naturally; I really recommend explicitly practicing this as you work your way through algorithmic and design problems.
 2. Write your code on a whiteboard rather than in an IDE or on paper. It sounds odd, but you will likely be asked to solve a problem on a whiteboard during your on-site interview, or even type into a blank word processor during a video call. If you’ve only practiced in IDEs that provide syntax support and familiar formatting, this will seem unnatural and can throw you off. Definitely explicitly practice it so it feels comfortable when it comes time for the interview.
 3. Use the platform Pramp to work through real practice interviews with real people. This tool helped me a lot; like I mentioned in point 1, I found it very difficult to talk my way through problems, and when I hit an obstacle I would often freeze and go silent or into an excruciating “uh” mode where no prompting from the interviewer could help. Pramp is ostensibly low-pressure, because you are not actually interviewing; but it feels just as high-pressure, because you are working through problems in front of a stranger. It also puts you in the position of the interviewer, too, which I found really useful for expanding my understanding of problems.
-
----
 
 ## Database Problems
 
@@ -216,8 +251,6 @@ Don’t neglect the soft skills portion of the interview, either! Good communica
 8. [**https://www.hackerrank.com/domains/python**](https://www.hackerrank.com/domains/python)
 9. [**https://www.hackerrank.com/domains/data-structures**](https://www.hackerrank.com/domains/data-structures)
 10. [**https://www.youtube.com/c/NeetCode/videos**](https://www.youtube.com/c/NeetCode/videos)
-
----
 
 ## Behavioral Interview Questions
 

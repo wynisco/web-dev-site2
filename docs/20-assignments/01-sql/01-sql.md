@@ -1,4 +1,4 @@
-# SQL Assignments
+# SQL
 
 
 ```mdx-code-block

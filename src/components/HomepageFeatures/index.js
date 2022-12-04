@@ -4,17 +4,44 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
+    title: 'Intensive Training',
+    Svg: require('@site/static/img/intensive-training.svg').default,
+    description: (
+      <>
+        We build strong momentum with 6 to 8 hours per day of intense training and preparation
+      </>
+    ),
+  },
+  {
+    title: 'Industrial Project-based Labs',
+    Svg: require('@site/static/img/undraw-docusaurus-react.svg').default,
+    description: (
+      <>
+        Our technical labs boost hands-on data engineering skills and based on real-life projects
+      </>
+    ),
+  },
+  {
+    title: 'Assessment and Capstones',
+    Svg: require('@site/static/img/undraw-docusaurus-tree.svg').default,
+    description: (
+      <>
+        We continuously assess your skills by quizzes, assignments and capstone projects
+      </>
+    ),
+  },
+  {
     title: 'Technical Knowledge',
     Svg: require('@site/static/img/undraw-docusaurus-mountain.svg').default,
     description: (
       <>
-        We build strong momentum with 6 to 8 hours per day of intense teaching and preparation
+        Our resources are exclusive and focused on things that matter from interview and job perspective
       </>
     ),
   },
   {
     title: 'Resume/Interview Prep',
-    Svg: require('@site/static/img/undraw-docusaurus-tree.svg').default,
+    Svg: require('@site/static/img/interview-prep.svg').default,
     description: (
       <>
         Solid resume and LinkedIn profile, interview prep to top it off
@@ -23,7 +50,7 @@ const FeatureList = [
   },
   {
     title: 'Network',
-    Svg: require('@site/static/img/undraw-docusaurus-react.svg').default,
+    Svg: require('@site/static/img/networking.svg').default,
     description: (
       <>
         This is where we shine. Our distribution network of contacts, referrals and relationships are unmatched

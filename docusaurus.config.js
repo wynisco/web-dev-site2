@@ -74,6 +74,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '⭐️ New Bootcamp starting soon...<a target="_blank" rel="noopener noreferrer" href="https://www.wynisco.com/apply.html">Register Now</a>!',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'Wynisco',
         logo: {
@@ -82,9 +90,38 @@ const config = {
         },
         items: [
           {
-            to: 'docs/getting-started',
-            position: 'left',
-            label: 'Docs',
+            label: "Bootcamp",
+            position: "left",
+            items: [
+              {
+                label: "Basics",
+                to: "docs/basics",
+              },
+              {
+                label: "Concepts",
+                to: "docs/concepts",
+              },
+              {
+                label: "Labs",
+                to: "docs/labs",
+              },
+              {
+                label: "Assignments",
+                to: "docs/assignments",
+              },
+              {
+                label: "Case Studies",
+                to: "docs/case-studies",
+              },
+              {
+                label: "Interview Prep",
+                to: "docs/interview-prep",
+              },
+              {
+                label: "Extras",
+                to: "docs/extras",
+              },
+            ],
           },
           {
             to: 'blog',
@@ -92,15 +129,10 @@ const config = {
             label: 'Blog',
           },
           {
-            to: '/gists',
-            position: 'left',
-            label: 'Gists',
+            href: 'https://github.com/wynisco/datacamp',
+            label: 'GitHub',
+            position: 'right',
           }
-          // {
-          //   href: 'https://github.com/datalaker/wysde2',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
         ],
       },
       footer: {

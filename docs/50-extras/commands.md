@@ -459,6 +459,20 @@ prefect agent start '<work-queue-id>'
 	wget -r -np -nH --cut-dirs=3 -R index.html <url>
 ```
 
+## Psql
+
+```
+CREATE DATABASE <db_name>;
+CREATE USER <user_name> WITH ENCRYPTED PASSWORD '<password>';
+GRANT ALL ON DATABASE <db_name> TO <user_name>;
+GRANT pg_read_server_files TO <user_name>;
+\q
+```
+
+```
+psql -h localhost -p 5432 -d <db_name> -U <user_name> -W
+```
+
 ## Cloudformation Templates
 
 ### AWS Managed Airflow (MWAA)
