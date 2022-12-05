@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="https://api.whatsapp.com/send?phone=19843581968&text=Hi%20Wynisco%20Team%0AI%20am%20interested%20in%20the%20program%20and%20need%20more%20information%0AThanks">
-            Call or Whatsapp: +1 (984) 358-1968
+            Send us Whatsapp message: +1 (984) 358-1968
           </Link>
         </div>
       </div>
