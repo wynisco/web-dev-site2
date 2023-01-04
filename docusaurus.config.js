@@ -138,8 +138,71 @@ const config = {
       footer: {
         style: 'dark',
         links: [
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Website',
+                href: 'https://www.wynisco.com/',
+              },
+              {
+                label: 'Twitter',
+                to: 'https://twitter.com/wynisco',
+              },
+              {
+                label: 'Linkedin',
+                to: 'https://www.linkedin.com/company/wynisco/',
+              },
+              {
+                label: 'Whatsapp',
+                to: 'https://api.whatsapp.com/send?phone=19843581968&text=Hi%20Wynisco%20Team%0AI%20am%20interested%20in%20the%20program%20and%20need%20more%20information%0AThanks',
+              },
+              {
+                label: 'Youtube',
+                to: 'https://www.youtube.com/channel/UCCVlUaDs6PtNiIMkft-pg-w',
+              },
+              {
+                label: 'Blog',
+                to: 'https://www.wynisco.com/blog',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Events',
+                to: 'https://www.wynisco.com/events.html',
+              },
+              {
+                label: 'Success Stories',
+                to: 'https://www.wynisco.com/success-stories.html',
+              },
+              {
+                label: 'Apply Now',
+                to: 'https://www.wynisco.com/apply.html',
+              },
+              {
+                label: 'Contact Us',
+                to: 'https://www.wynisco.com/contact-us.html',
+              },
+              {
+                label: 'About Us',
+                to: 'https://www.wynisco.com/about-us.html',
+              },
+              {
+                label: 'Privacy Policy',
+                to: 'https://www.wynisco.com/privacy-policy.html',
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} WYNISCO Pvt. Ltd.`,
+        logo: {
+          alt: 'Wynisco Logo',
+          src: '/img/wys_logo.jpeg',
+          href: 'https://www.wynisco.com/',
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} WYNISCO Pvt. Ltd. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
