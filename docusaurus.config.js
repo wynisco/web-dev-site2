@@ -7,7 +7,7 @@ require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Data Engineering Bootcamp',
+  title: 'Front End / UI / Web Development Bootcamp',
   tagline: 'Faster than the speed of light. Well, that\'s how quickly we can get you hired!',
   url: 'https://www.wynisco.com/',
   baseUrl: '/',

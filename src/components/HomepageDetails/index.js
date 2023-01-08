@@ -17,9 +17,14 @@ function TechStack() {
 const week1 = (
   <div>
     <ol>
-      <li>Candidate Onboarding</li>
-      <li>Workspace Setup</li>
-      <li>Fundamentals of Data Engineering</li>
+      <li>Introduction and Curriculum Review</li>
+      <li>HTML</li>
+      <li>Media Queries</li>
+      <li>Flexbox</li>
+      <li>CSS Grid</li>
+      <li>SCSS</li>
+      <li>BootStrap </li>
+      <li>UX Process (Prototyping, Figma, UX Research) </li>
     </ol>
   </div>
 );
@@ -27,9 +32,14 @@ const week1 = (
 const week2 = (
   <div>
     <ol>
-      <li>SQL Data Modeling with Postgres</li>
-      <li>Data Warehousing with Snowflake</li>
-      <li>Data Lakes with S3</li>
+      <li>Project 1 Based on HTML/CSS Only</li>
+      <li>Core Javascript</li>
+      <li>Javascript ES6</li>
+      <li>Manipulating CSS/ HTML with Javascript</li>
+      <li>DOM Manipulation</li>
+      <li>Events /Bubbing</li>
+      <li>Javascript Problem Solving</li>
+      <li>Javascript Regex</li>
     </ol>
   </div>
 );
@@ -37,9 +47,11 @@ const week2 = (
 const week3 = (
   <div>
     <ol>
-      <li>Data Transformation with Python</li>
-      <li>Data Transformation with SQL</li>
-      <li>Data Transformation with AWS Lambda</li>
+      <li>Javascript Problem Solving</li>
+      <li>Chrome Web Dev Tool In Depth</li>
+      <li>NPM</li>
+      <li>Application Architecture</li>
+      <li>Git</li>
     </ol>
   </div>
 );
@@ -47,10 +59,12 @@ const week3 = (
 const week4 = (
   <div>
     <ol>
-      <li>Data Pipeline and Orchestration with Apache Airflow</li>
-      <li>IaC with AWS CloudFormation</li>
-      <li>NoSQL Data Modeling with Cassandra</li>
-      <li>Data Warehousing with Amazon Redshift</li>
+      <li>Project based on HTML /CSS / Javascript</li>
+      <li>React Introduction,Architecture and Concepts</li>
+      <li>React State and Props</li>
+      <li>Mini Project</li>
+      <li>React Hooks</li>
+      <li>Full Project</li>
     </ol>
   </div>
 );
@@ -58,8 +72,13 @@ const week4 = (
 const week5 = (
   <div>
     <ol>
-      <li>Data Lakehouses with Delta Lake</li>
-      <li>Data Transformation with Databricks PySpark</li>
+      <li>React Project Continued</li>
+      <li>APIs</li>
+      <li>Introduction to Node js</li>
+      <li>Express</li>
+      <li>Build Backend and Services</li>
+      <li>Connect backend with front end </li>
+      <li>Build full stack app with React, Node and MongoDB</li>
     </ol>
   </div>
 );
@@ -67,11 +86,10 @@ const week5 = (
 const week6 = (
   <div>
     <ol>
-      <li>Data Transformation with AWS Glue Studio</li>
-      <li>Data Transformation with dbt</li>
-      <li>Data Quality and Validation with Great Expectations</li>
-      <li>Real-time Event Streaming with Apache Kafka</li>
-      <li>Real-time Event Streaming with Amazon Kinesis</li>
+      <li>Unit Testing</li>
+      <li>Agile/ Scrum / Jira</li>
+      <li>Working with Dates</li>
+      <li>Interview Practice</li>
     </ol>
   </div>
 );
@@ -79,13 +97,25 @@ const week6 = (
 const week7 = (
   <div>
     <ol>
-      <li>REST API with FastAPI</li>
-      <li>CICD Pipeline with GitHub Actions</li>
-      <li>Advanced Data Engineering with Databricks</li>
-      <li>Change Data Capture with Debezium</li>
+      <li>Interview Practice and Mock Interviews</li>
+      <li>Resume Prep </li>
+      <li>Marketing Starts </li>
     </ol>
   </div>
 );
+
+const week8 = (
+  <div>
+    <ol>
+      <li> Mock Interviews</li>
+      <li> Project Training</li>
+      <li> Problem Solving</li>
+
+    
+    </ol>
+  </div>
+);
+
 
 function BootcampTimeline() {
   return (
@@ -98,62 +128,70 @@ function BootcampTimeline() {
               <PlayCircleFilled
                 style={{
                   fontSize: '16px',
-                  color: "#ba8c0d",
                 }}
               />
             }
-          > 
-          Bootcamp Session Starts on Zoom
+          >
+            START
       </Timeline.Item>
-      <Timeline.Item color="#ba8c0d">
+      <Timeline.Item>
         <Popover content={week1} title="Week 1">
-          <Button type="primary" shape="round" style={{ background: "#ba8c0d", borderColor: "#ba8c0d" }} icon={<CalendarOutlined />}>Week 1</Button>
+          <Button type="primary" shape="round" icon={<CalendarOutlined />}>Week 1</Button>
         </Popover>
       </Timeline.Item>
-      <Timeline.Item color="#ba8c0d">
+      <Timeline.Item>
         <Popover content={week2} title="Week 2">
-          <Button type="primary" shape="round" style={{ background: "#ba8c0d", borderColor: "#ba8c0d" }} icon={<CalendarOutlined />}>Week 2</Button>
+          <Button type="primary" shape="round" icon={<CalendarOutlined />}>Week 2</Button>
         </Popover>
       </Timeline.Item>
-      <Timeline.Item color="#ba8c0d">
+      <Timeline.Item>
         <Popover content={week3} title="Week 3">
-          <Button type="primary" shape="round" style={{ background: "#ba8c0d", borderColor: "#ba8c0d" }} icon={<CalendarOutlined />}>Week 3</Button>
+          <Button type="primary" shape="round" icon={<CalendarOutlined />}>Week 3</Button>
         </Popover>
       </Timeline.Item>
-      <Timeline.Item color="#ba8c0d">
+      <Timeline.Item>
         <Popover content={week4} title="Week 4">
-          <Button type="primary" shape="round" style={{ background: "#ba8c0d", borderColor: "#ba8c0d" }} icon={<CalendarOutlined />}>Week 4</Button>
+          <Button type="primary" shape="round" icon={<CalendarOutlined />}>Week 4</Button>
         </Popover>
       </Timeline.Item>
-      <Timeline.Item color="#ba8c0d">
+      <Timeline.Item>
         <Popover content={week5} title="Week 5">
-          <Button type="primary" shape="round" style={{ background: "#ba8c0d", borderColor: "#ba8c0d" }} icon={<CalendarOutlined />}>Week 5</Button>
+          <Button type="primary" shape="round" icon={<CalendarOutlined />}>Week 5</Button>
         </Popover>
       </Timeline.Item>
-      <Timeline.Item color="#ba8c0d">
+      
+      <Timeline.Item color="green">
         <Popover content={week6} title="Week 6">
-          <Button type="primary" shape="round" style={{ background: "#ba8c0d", borderColor: "#ba8c0d" }} icon={<CalendarOutlined />}>Week 6</Button>
+          <Button type="primary" shape="round" icon={<CalendarOutlined />} color="green">Week 6</Button>
         </Popover>
       </Timeline.Item>
-      <Timeline.Item color="#ba8c0d">
+      <Timeline.Item color="green">
         <Popover content={week7} title="Week 7">
-          <Button type="primary" shape="round" style={{ background: "#ba8c0d", borderColor: "#ba8c0d" }} icon={<CalendarOutlined />}>Week 7</Button>
+          <Button type="primary"  shape="round" icon={<CalendarOutlined />}>Week 7</Button>
         </Popover>
       </Timeline.Item>
       <Timeline.Item
             dot={
-              <NotificationFilled
+              <PlayCircleFilled
                 style={{
                   fontSize: '16px',
-                  color: "#ba8c0d"
                 }}
               />
             }
-          > Bootcamp Session Ends and Marketing Starts
+          >
+            END
       </Timeline.Item>
+      <Timeline.Item color="green">
+        <Popover content={week8} title="Week 8">
+          <Button type="primary"  shape="round" icon={<CalendarOutlined />}>Week 8</Button>
+        </Popover>
+      </Timeline.Item>
+      
+      
       </Timeline>
     </div>
   );
 }
+
 
 export {TechStack, BootcampTimeline};
