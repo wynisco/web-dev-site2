@@ -98,6 +98,10 @@ const config = {
                 to: "docs/basics",
               },
               {
+                label: "HTML",
+                to: "docs/html",
+              },
+              { 
                 label: "Concepts",
                 to: "docs/concepts",
               },
